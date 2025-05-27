@@ -20,7 +20,7 @@ PERSONA_NAME = "JCMAIA" # O nome da persona que será emulada.
 # AGORA: Múltiplos arquivos para diferentes fontes de texto
 WORDPRESS_POSTS_FILE = "codebase.txt" # Seus posts do blog
 LIVRO_BIO_FILE = "livrobio.txt"                      # Seu livro de biografia
-LIVRO_GUERRA_FILE = "livroguerra.txt"                # Seu livro "A Minha Arte e a Minha Guerra"
+LIVRO_GUERRA_FILE = "livroguerra.txt"                # Seu Livro 2
 
 # Modelo LLM
 # ANTES: MODEL = "google/gemini-2.0-flash-exp:free"
@@ -53,17 +53,17 @@ livro_guerra_content = load_and_clean_content(LIVRO_GUERRA_FILE)
 # ANTES: CODEBASE_CONTENT
 # AGORA: ALL_PERSONALITY_CONTENT com estrutura
 ALL_PERSONALITY_CONTENT = f"""
---- INÍCIO DOS POSTS DO BLOG "A minha distorção da realidade" ({PERSONA_NAME}) ---
+--- INÍCIO DOS POSTS DO BLOG  ({PERSONA_NAME}) ---
 {wordpress_posts_content}
 --- FIM DOS POSTS DO BLOG ---
 
---- INÍCIO DO LIVRO "A minha distorção da realidade" (Biografia - {PERSONA_NAME}) ---
+--- INÍCIO DO LIVRO 1 (Biografia - {PERSONA_NAME}) ---
 {livro_bio_content}
 --- FIM DO LIVRO "A minha distorção da realidade" (Biografia) ---
 
---- INÍCIO DO LIVRO "A minha Arte e a Minha Guerra" ({PERSONA_NAME}) ---
+--- INÍCIO DO LIVRO 2 ({PERSONA_NAME}) ---
 {livro_guerra_content}
---- FIM DO LIVRO "A minha Arte e a Minha Guerra" ---
+--- FIM DO LIVRO  ---
 """
 
 if not wordpress_posts_content and not livro_bio_content and not livro_guerra_content:
